@@ -20,6 +20,13 @@
             src: url(https://login.microsoftonline.com/templates/src/fonts/segoeui_bold.WOFF);
             font-weight: bold;
         }
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXp-p7K4KLg.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
         #AmazonExchange {
           background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/colored/amazon.svg);
         }
@@ -115,7 +122,7 @@
         }
 
         body {
-            font-family: Segoe UI, SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: Montserrat, "Segoe UI";
             background-attachment: fixed;
             background-color: #fff;
             background-position: center;
@@ -371,7 +378,8 @@
             height: 50px;
             width: 70%;
             border-radius: .5rem;
-            text-indent: 20px
+            text-indent: 20px;
+            outline: none;
         }
 
         #attributeList ul li input::-webkit-input-placeholder {
@@ -767,8 +775,8 @@
         }
 
         .unified_container .row .panel-default #api .intro {
-            display: block;
-            text-align: left
+            display: none;
+            text-align: left;
         }
 
         .unified_container .row .panel-default #api .intro h2 {
@@ -1124,7 +1132,7 @@
 
 </head>
 <body>
-    <div id="background_branding_container" data-tenant-branding-background-color="true">
+    <div id="background_branding_container" style="background-color: #282c34" data-tenant-branding-background-color="true">
       <img data-tenant-branding-background="true" src="https://login.microsoftonline.com/templates/src/backgrounds/1-1.png" alt="Illustration"/>
     </div>
     <div class="container  unified_container " role="presentation">
