@@ -3,7 +3,7 @@
 <html>
 <head>
     
-    <title>Portofoglio - Login</title>
+    <title>Sign up or sign in</title>
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,6 +19,13 @@
             font-family: 'SegoeUI';
             src: url(https://login.microsoftonline.com/templates/src/fonts/segoeui_bold.WOFF);
             font-weight: bold;
+        }
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXp-p7K4KLg.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
         }
         #AmazonExchange {
           background-image: url(https://login.microsoftonline.com/templates/src/idp_logos/colored/amazon.svg);
@@ -115,7 +122,7 @@
         }
 
         body {
-            font-family: Segoe UI, SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: Montserrat, "Segoe UI";
             background-attachment: fixed;
             background-color: #fff;
             background-position: center;
@@ -371,7 +378,8 @@
             height: 50px;
             width: 70%;
             border-radius: .5rem;
-            text-indent: 20px
+            text-indent: 20px;
+            outline: none;
         }
 
         #attributeList ul li input::-webkit-input-placeholder {
@@ -767,8 +775,8 @@
         }
 
         .unified_container .row .panel-default #api .intro {
-            display: block;
-            text-align: left
+            display: none;
+            text-align: left;
         }
 
         .unified_container .row .panel-default #api .intro h2 {
@@ -1110,7 +1118,7 @@
             }
 
             .unified_container .row .panel-default #api .localAccount .entry .entry-item .password-label #forgotPassword {
-                bottom: -1rem
+                bottom: -1rem;
             }
 
             .forgot-password.center-height {
@@ -1119,12 +1127,42 @@
                 position: relative
             }
         }
+
+        #forgotPassword {
+            /*TODO: implement forgot password*/
+            display: none !important;
+        }
+
+        .rememberMe {
+            width: 100% !important;
+            margin-left: 0 !important;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 5px !important;
+            margin-top: 5px !important;
+        }
+
+        .rememberMe>#rememberMe {
+            margin: 0 !important;
+            accent-color: rgb(3, 252, 203);
+        }
+
+        .rememberMe>label {
+            margin: 0 !important;
+        }
+
+        .companyLogo {
+            display: none !important;
+        }
         /* endinject */
     </style>
 
 </head>
 <body>
-    <div id="background_branding_container" data-tenant-branding-background-color="true">
+    <div id="background_branding_container" style="background-color: #282c34" data-tenant-branding-background-color="true">
       <img data-tenant-branding-background="true" src="https://login.microsoftonline.com/templates/src/backgrounds/1-1.png" alt="Illustration"/>
     </div>
     <div class="container  unified_container " role="presentation">
